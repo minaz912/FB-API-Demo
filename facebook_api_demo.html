@@ -1,0 +1,31 @@
+<head>
+  <title>facebook_api_demo</title>
+</head>
+
+<body>
+  <h1>Facebook Demo</h1>
+  <!-- {{> post}} -->
+  <button class="pull-data btn btn-primary">Pull data from Facebook</button>
+  {{#each posts}}
+    {{> post}}
+  {{/each}}
+</body>
+
+<template name="post">
+  <div class="well">
+    {{id}}
+    {{text.message}}
+  </div>
+  <ul>
+    {{#each text.comments.data}}
+      - {{message}} <br />
+    {{/each}}
+  </ul>
+</template>
+
+ <!-- <template name="post">
+ 	<p>{{>facebookFollow config}}</p>
+  {{> facebookActivity}}
+  <div class="fb-like" data-href="https://www.facebook.com/verge/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+ 	<button class="pull-data">Click</button>
+ </template> -->
