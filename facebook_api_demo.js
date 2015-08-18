@@ -38,13 +38,3 @@ if (Meteor.isServer) {
     // code to run on server at startup
   });
 }
-
-// Meteor.methods({
-//   pullData: function(){
-//     FB.ui(
-//     {
-//       method: 'share',
-//       href: 'https://developers.facebook.com/docs/'
-//     }, function(response){});
-//   }
-// })
